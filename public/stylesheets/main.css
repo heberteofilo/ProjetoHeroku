@@ -29,8 +29,8 @@
 }
 
 .logo{
-  width: 44px;
-  height: 32px;
+  width: 74px;
+  height: 62px;
   background-image: url(../images/white-logo.png);
   background-size: contain;
 }
@@ -57,7 +57,7 @@
 
 .navbar-menu a{
   color: #fff;
-  font-size: 15px;
+  font-size: 21px;
   font-weight: 500;
   margin-left: 30px;
   transition: .2s linear;
