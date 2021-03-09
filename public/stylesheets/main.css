@@ -111,19 +111,19 @@
 }
 
 #home .content h1::after{
-  content: "Darkcode";
+  content: "SecView Oferece";
   animation: textanim 10s linear infinite;
 }
 
 @keyframes textanim{
   25%{
-    content: "A Developer";
+    content: "Mais Eficiência";
   }
   50%{
-    content: "A Designer";
+    content: "Mais Controle";
   }
   75%{
-    content: "A Youtuber";
+    content: "Mais Segurança";
   }
 }
 
