@@ -3,7 +3,7 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 
 
-// Criação de rotas e atalhos
+// -- Criação de rotas e atalhos --
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .use('/css', express.static(path.join(__dirname, 'public/stylesheets')))
