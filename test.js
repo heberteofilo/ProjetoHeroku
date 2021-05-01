@@ -11,14 +11,14 @@ test('responds to requests', (t) => {
   t.plan(4);
 
   // Wait until the server is ready
-  // Esperar até o servidor funcionar
+  // Espere até que o servidor esteja pronto
   child.stdout.on('data', _ => {
     // Make a request to our app
-    // Fazer a requisição para nosso app
+    // Faça uma solicitação ao nosso aplicativo
     (async () => {
       const response = await got('http://127.0.0.1:5000');
       // stop the server
-      // parar o servidor
+      // pare o servidor
       child.kill();
       // No error
       // Sem erro
@@ -27,6 +27,7 @@ test('responds to requests', (t) => {
       // resposta com sucesso
       t.equal(response.statusCode, 200);
       // Assert content checks
+      // Assegurar verificações de conteúdo
       t.notEqual(response.body.indexOf("<title>Node.js Getting Started on Heroku</title>"), -1);
       t.notEqual(response.body.indexOf("Getting Started on Heroku with Node.js"), -1);
     })();
