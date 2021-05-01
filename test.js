@@ -18,10 +18,8 @@ test('responds to requests', (t) => {
       child.kill();
       // Sem erro
       t.false(response.error);
-      // Successful response
       // resposta com sucesso
       t.equal(response.statusCode, 200);
-      // Assert content checks
       // Assegurar verificações de conteúdo
       t.notEqual(response.body.indexOf("<title>Node.js Getting Started on Heroku</title>"), -1);
       t.notEqual(response.body.indexOf("Getting Started on Heroku with Node.js"), -1);
