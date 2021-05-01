@@ -9,18 +9,13 @@ const child = spawn('node', ['index.js'], {env});
 
 test('responds to requests', (t) => {
   t.plan(4);
-
-  // Wait until the server is ready
   // Espere até que o servidor esteja pronto
   child.stdout.on('data', _ => {
-    // Make a request to our app
     // Faça uma solicitação ao nosso aplicativo
     (async () => {
       const response = await got('http://127.0.0.1:5000');
-      // stop the server
       // pare o servidor
       child.kill();
-      // No error
       // Sem erro
       t.false(response.error);
       // Successful response
