@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
-
+// PROJETO SECVIEW HEROKU
 // -- Criação de rotas e atalhos --
 express()
   .use(express.static(path.join(__dirname, 'public')))
